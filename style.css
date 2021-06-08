@@ -1,0 +1,888 @@
+/* =========================================
+    Default Theme
+    ----------------------------------------
+    Colors:
+        White:               #fff
+        Black:               #000   
+        Red:                 #ff0000
+
+      Logo:
+          Magenta:             #e6135c
+          Orange:              #f0821a
+          Blue:                #2784c6
+          Green:               #75b946
+============================================ */
+
+@font-face {
+  font-family: 'HeyComic';
+  src: url(fonts/HeyComic.ttf);
+}
+@font-face {
+  font-family: 'MontEL';
+  src: url(fonts/Mont-ExtraLightDEMO.otf);
+}
+@font-face {
+  font-family: 'MontH';
+  src: url(fonts/Mont-HeavyDEMO.otf);
+}
+
+body {
+  width:100%;
+  overflow-x: hidden;
+}
+
+main{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* =========================================
+                Navigation
+============================================ */
+
+
+#container-nav {
+  position: absolute;
+  width: 100%;
+  animation: anim_nav 4.2s forwards;
+}
+
+@keyframes anim_nav{
+  from{
+    top: -100%;
+  }
+  to{
+    top: 0%;
+  }
+}
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3em;
+  font-family: MontH, sans-serif ;
+  padding: 7px;
+  margin-right: 20px;
+}
+
+.nav a:hover {
+  color: #2784c6;
+  background-color: white;
+  border-radius: 10px;
+  transition-duration: 0.5s;
+  padding: 7px;
+  text-decoration-line: none;
+}
+
+#home-txt {
+  width: 100%;
+  margin-top: -190px;
+  margin-left: 40px;
+  display: block;
+}
+
+
+
+
+/* =========================================
+                 Home
+============================================ */
+
+header{
+  background-image: url("img/home/backgroundAnimation.gif");
+  background-size: cover;
+  height: 100vh;
+  width:100%;
+  background-attachment: fixed;
+}
+
+#titel {
+  position: absolute;
+  bottom: 5%;
+  right: 3%;
+  font-family: MontH, sans-serif;
+  color: white; 
+  font-size: 4.4em;
+  text-align: right;
+  animation: animat 4s forwards;
+}
+
+@keyframes animat {
+  from {
+    right: -100%;
+  }
+
+  to {
+    right: 9%;
+  }
+}
+
+
+/* =========================================
+                 About
+============================================ */
+#about {
+  text-align: center;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+#about h2 {
+  font-family: HeyComic, sans-serif;
+  color: white;
+  
+}
+
+#about p {
+  font-family: MontEL, sans-serif;
+  color: white;
+}
+
+p {
+  font-family: MontH, sans-serif;
+  color: white;
+  font-size: 1em;
+}
+
+.bold {
+  font-family: MontH, sans-serif;
+  color: white;
+}
+
+
+
+/* =========================================
+                Html, Body
+============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#line-seperator {
+  border-top: solid 3px black;
+  border-top-width: 100%;
+}
+
+h2 {
+  font-family: HeyComic, sans-serif;
+  font-size: 3em;
+  color: white;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* =========================================
+                Preloader
+============================================ */
+#preloader {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+#status {
+    background-image: url(img/preloader/preloader.gif);
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 45%;
+    top: 40%;
+    margin-top: -35px;
+    margin-left: -35px;
+}
+
+
+
+/* =========================================
+            Background Animation
+============================================ */
+body {
+    background: linear-gradient(-45deg, #e6135c, #f0821a, #2784c6, #75b946);
+    background-size: 100% 1000%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* =========================================
+                Portfolio
+============================================ */
+#portfolio-titel {
+  text-align: center;
+}
+
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: #ffffff;
+    width: 48%;
+    min-width: 420px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 26%;
+    top: 50%;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    margin-top: 740px
+}
+.image-container{
+    position: relative;
+    width: 100%;
+
+}
+img{
+    position: relative;
+    width: 100%;
+    display: none;
+}
+.active{
+    display: block;
+}
+.dot-container{
+    width: 500px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+button{
+    outline: none;
+    cursor: pointer;
+}
+.dot-container button{
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    border: 2px solid #2784c6;
+    background-color: transparent;
+}
+.dot-container button:nth-child(1){
+    background-color: #2784c6;
+}
+#prev,#next{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    background-color: #2784c6;
+    color: #ffffff;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+#prev{
+    left: 15px;
+}
+#next{
+    right: 15px;
+}
+
+/* =========================================
+                Typoanimatie
+============================================ */
+#typo {
+  margin-top: 800px;
+}
+
+#VideoTypo {
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* =========================================
+                 Video
+============================================ */
+#film {
+  margin-top: 100px;
+}
+
+#Video {
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+
+/* =========================================
+                Contact
+============================================ */
+h3 {
+  font-family: MontH, sans-serif;
+  font-size: 1.5em;
+  color: white;
+}
+
+#contact {
+  margin-top: 100px;
+
+}
+
+#contact p {
+  font-family: MontEL;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/*Contact Right*/
+#contact-right p {
+  margin-bottom: 25px;
+}
+
+ul.office-details {
+  list-style: none;
+  padding: 0;
+}
+
+ul.office-details li {
+  font-family: MontEL, sans-serif;
+  margin-top: 10px;
+  display: flex;
+  color: white;
+}
+
+ul.office-details li i {
+  font-size: 1.3rem;
+  width: 20px;
+  color: black;
+}
+
+.office h4 {
+  font-family: MontEL, sans-serif;
+  color: white;
+}
+
+.social-list {
+  margin-left: 32%;
+}
+
+.social-list li {
+  list-style: none;
+  display: inline-block;
+  margin-top: 10px;
+
+}
+
+
+.social-list li a {
+  font-size: 2.25rem;
+
+  padding: 5px;
+  border-radius: 50%;
+
+  color: #212226;
+  text-align: center;
+  margin-right: 10px;
+  
+}
+
+.social-list li a:hover {
+  color: white;
+  border-color: transparent;
+}
+
+/*Contact Left*/
+#contact-left {
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.3)
+  border-radius: 6px;
+  margin-top: 25px;
+}
+
+#contact-left h4 {
+  font-family: MontH, sans-serif;
+  font-size: 1.5em;
+  color: white;
+}
+
+#contact-left p {
+  margin-bottom: 30px;
+}
+
+#contact-left form .form-control {
+  font-family: MontEL, sans-serif;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+#contact-left form textarea.form-control {
+  min-height: 160px;
+}
+
+#submit-button {
+  margin-left: 41%;
+  margin-top: 30px;
+}
+
+#submit-button a {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  font-family: MontH, sans-serif;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 5px 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+#submit-button a:hover {
+  color: white;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+
+
+/* =========================================
+              Google Maps
+============================================ */
+#map {
+  height: 400px;
+  width: 1000px;
+  border: 5px solid white;
+  border-radius: 10px;
+  margin-top: 80px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  margin-left: 6%;
+}
+
+
+
+
+/* =========================================
+                Footer
+============================================ */
+footer {
+  padding: 30px;
+}
+
+
+
+/* =========================================
+              Media Queries
+============================================ */
+@media only screen and (max-width: 1200px){
+  .nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-family: MontH, sans-serif ;
+  padding: 8px;
+  margin-left: -40px;
+  margin-right: 40px;
+}
+
+#home-txt {
+  width: 100%;
+  margin-top: -145px;
+  margin-left: 30px;
+  display: block;
+}
+
+#titel {
+  font-size: 4em;
+}
+
+#about {
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+h2{
+  font-size: 2.8em;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+
+.container {
+    background-color: #ffffff;
+    width: 20%;
+    min-width: 650px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 17%;
+    top: 36%;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    margin-top: 740px
+  }
+
+  .dot-container {
+    width: 450px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #typo {
+    margin-top: 630px;
+    margin-left: 20px;
+    text-align: center;
+  }
+
+
+  #VideoTypo {
+    width: 600px;
+    height: 340px;
+    margin-top: 100px;
+  }
+
+  #film {
+    text-align: center;
+    margin-left: 20px;
+  }
+
+#Video {
+  width: 600px;
+  height: 340px;
+}
+
+  #contact p {
+    font-size: 1em;
+  }
+
+  #contact-right {
+    margin-top: 25px;
+
+  }
+
+  #contact-right h3 {
+    text-align: left;
+  }
+
+  #contact-right p {
+    text-align: left;
+  }
+
+  body {
+    background: linear-gradient(-45deg, #e6135c, #f0821a, #2784c6, #75b946);
+    background-size: 400% 1150%;
+    animation: gradient 15s ease infinite;
+}
+
+.office {
+  margin-top: 0px;
+}
+
+#map {
+  height: 370px;
+  width: 750px;
+  margin-left: 9%;
+  border: 5px solid white;
+  border-radius: 10px;
+  margin-top: 80px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+}
+
+
+@media only screen and (max-width: 1000px){
+  .nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-family: MontH, sans-serif ;
+  padding: 5px;
+  margin-left: -15px;
+}
+
+#home-txt {
+  width: 100%;
+  margin-top: -78px;
+  margin-left: 20px;
+  display: block;
+}
+
+#titel {
+  font-size: 3.7em;
+}
+
+#about {
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+h2{
+  font-size: 2.6em;
+}
+
+p {
+  font-size: 1em;
+}
+
+
+.container {
+    background-color: #ffffff;
+    width: 20%;
+    min-width: 500px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 15%;
+    top: 36%;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    margin-top: 740px
+  }
+
+  .dot-container {
+    width: 450px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #typo {
+    margin-top: 500px;
+    margin-left: 20px;
+    text-align: center;
+  }
+
+
+  #VideoTypo {
+    width: 490px;
+    height: 275px;
+    margin-top: 100px;
+  }
+
+  #film {
+    text-align: center;
+    margin-left: 20px;
+  }
+
+  #Video {
+    width: 490px;
+    height: 275px;
+    margin-top: 50px;
+  }
+
+  #contact p {
+    font-size: 0.9em;
+  }
+
+  #contact-right {
+    margin-top: 80px;
+
+  }
+
+  #contact-right h3 {
+    text-align: center;
+  }
+
+  #contact-right p {
+    text-align: center;
+  }
+
+  body {
+    background: linear-gradient(-45deg, #e6135c, #f0821a, #2784c6, #75b946);
+    background-size: 400% 1150%;
+    animation: gradient 15s ease infinite;
+}
+
+.office {
+  margin-top: 30px;
+}
+
+#map {
+  height: 250px;
+  width: 550px;
+  margin-left: 5%;
+  border: 5px solid white;
+  border-radius: 10px;
+  margin-top: 80px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+}
+
+
+@media only screen and (max-width:700px){
+#container-nav {
+  position: absolute;
+  width: 100%;
+  animation: anim_nav 3.2s forwards;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.7em;
+  font-family: MontH, sans-serif ;
+  padding: 0px;
+  margin-left: -15px;
+}
+
+
+#home-txt {
+  width: 100%;
+  margin-top: -78px;
+  margin-left: 20px;
+  display: block;
+}
+
+#titel {
+  font-size: 3.2em;
+}
+
+#about {
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+h2{
+  font-size: 2.4em;
+}
+
+p {
+  font-size: 0.9em;
+}
+
+
+.container {
+    background-color: #ffffff;
+    width: 20%;
+    min-width: 380px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 11%;
+    top: 38%;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    margin-top: 740px
+  }
+
+  .dot-container {
+    width: 330px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #typo {
+    margin-top: 400px;
+    margin-left: 20px;
+    text-align: center;
+  }
+
+
+  #VideoTypo {
+    width: 400px;
+    height: 220px;
+    margin-top: 100px;
+  }
+
+  #film {
+    text-align: center;
+    margin-left: 20px;
+  }
+
+  #Video {
+    width: 400px;
+    height: 220px;
+  }
+
+  #contact p {
+    font-size: 0.8em;
+  }
+
+  #contact-right {
+    margin-top: 80px;
+
+  }
+
+  #contact-right h3 {
+    text-align: center;
+  }
+
+  #contact-right p {
+    text-align: center;
+  }
+
+  body {
+    background: linear-gradient(-45deg, #e6135c, #f0821a, #2784c6, #75b946);
+    background-size: 400% 1150%;
+    animation: gradient 15s ease infinite;
+}
+
+.office {
+  margin-top: 30px;
+}
+
+#map {
+  height: 200px;
+  width: 400px;
+  margin-left: 7%;
+  border: 5px solid white;
+  border-radius: 10px;
+  margin-top: 80px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+}
+
+
+
+
